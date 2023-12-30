@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>employee</title>
+
+</head>
+<body>
+	
+	<th:block th:insert="Header.html"></th:block>	
+	
+	<div class="container-fluid">
+		
+	<div class="card">  
+		
+		<div class="card-header text-center text-white bg-primary">
+			
+			<h4>Employee Edit Form</h4>
+		</div>
+		
+		<div class="card-body">
+			
+			<form action="/emp/update" method="post" th:object="${empObject}">
+			
+			<div class="row p-2">
+			        <div class="col-4">First Name</div>
+				    <div class="col-6">
+										    
+				           <input type="text" th:field="*{fname}" class="form-control">
+				    </div>
+			</div>
+			
+			<div class="row p-2">
+			        <div class="col-4">Last Name</div>
+				    <div class="col-6">
+										    
+				           <input type="text" th:field="*{lname}" class="form-control">
+				    </div>
+			</div>
+			
+			<div class="row p-2">
+			        <div class="col-4">DoB</div>
+				    <div class="col-6">
+										    
+				           <input type="date" th:field="*{dob}" class="form-control">
+				    </div>
+			</div>
+			
+			<div class="row p-2">
+			        <div class="col-4"> Phone</div>
+				    <div class="col-6">
+										    
+				           <input type="number" th:field="*{phone}" class="form-control">
+				    </div>
+			</div>
+			
+			<div class="row p-2">
+			        <div class="col-4">Company Name</div>
+				    <div class="col-6">
+										    
+				           <input type="text" th:field="*{companyName}" class="form-control">
+				    </div>
+			</div>
+			
+			<div class="row p-2">
+			        <div class="col-4">Email</div>
+				    <div class="col-6">
+										    
+				           <input type="email" th:field="*{email}" class="form-control">
+				    </div>
+			</div>
+			
+			<div class="row p-2">
+			        <div class="col-4">Department</div>
+				    <div class="col-6">
+										    
+				           <input type="text" th:field="*{department.dept_name}" class="form-control">
+				    </div>
+			</div>
+			
+		    <div class="row p-2">
+			        <div class="col-4">Age</div>
+				    <div class="col-6">
+										    
+				           <input type="number" th:field="*{age}" class="form-control">
+				    </div>
+			</div>
+			
+			<div class="row p-2">
+			        <div class="col-4">Country</div>
+				    <div class="col-6">
+										    
+				           <input type="text" th:field="*{address.country}" class="form-control">
+				    </div>
+			</div>
+			
+			<div class="row p-2">
+			        <div class="col-4">City</div>
+				    <div class="col-6">
+										    
+				           <input type="text" th:field="*{address.city}" class="form-control">
+				    </div>
+			</div>
+			
+			<div class="row p-2">
+			        <div class="col-4">State</div>
+				    <div class="col-6">
+										    
+				           <input type="text" th:field="*{address.state}" class="form-control">
+				    </div>
+			</div>
+			
+			<div class="row p-2">
+			        <div class="col-4">Zipcode</div>
+				    <div class="col-6">
+										    
+				           <input type="number" th:field="*{address.zipcode}" class="form-control">
+				    </div>
+			</div>
+			
+			<div class="row p-2">
+			        <div class="col-4">Gender</div>
+				    <div class="col-6">
+										    
+				           <input type="text" th:field="*{gender}" class="form-control">
+				    </div>
+			</div>
+			
+			<div class="row p-2">
+			        <div class="col-4">Post</div>
+				    <div class="col-6">
+										    
+				           <input type="text" th:field="*{post}" class="form-control">
+				    </div>
+			</div>
+			
+			<div class="row p-2">
+			        <div class="col-4">JoinDate</div>
+				    <div class="col-6">
+										    
+				           <input type="date" th:field="*{joinDate}" class="form-control">
+				    </div>
+			</div>
+			
+			<div class="row p-2">
+			        <div class="col-4">Salary</div>
+				    <div class="col-6">
+										    
+				           <input type="number" th:field="*{salary}" class="form-control">
+				    </div>
+			</div>			
+			
+			<div class="row p-2">
+			        <div class="col-4"></div>
+				    <div class="col-6">
+										    
+				           <input type="submit" value="update"  class="btn btn-success btn-lg">
+				    </div>
+			</div>
+			
+			<input type="hidden" th:field="*{id}">
+			
+			</form>
+			
+			</div>
+		
+		<div class="card-footer text-center bg-warning">
+			
+			<h6>copyright@2023</h6>
+		</div>
+	</div>	
+		
+	</div>
+	
+
+</body>
+</html>

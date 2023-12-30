@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>gallery</title>
+</head>
+<body>
+	
+	<th:block th:insert="Header.html"></th:block>	
+	
+	<div class="container-fluid">
+		
+	<div class="card">  
+		
+		<div class="card-header text-center text-white bg-primary">
+			
+			<h4>Photo Gallery</h4>
+		</div>
+		
+		<div class="card-body">
+			   
+			   <span th:each="imgName : ${imgNameList}">
+				   <img class="p-2" th:src="@{'/image/'+${imgName}}" width="300" height="300">
+			   </span>
+			
+			</div>
+		
+		<div class="card-footer text-center bg-warning">
+			
+			<h6>copyright@2023</h6>
+		</div>
+	</div>	
+		
+	</div>
+
+</body>
+</html>

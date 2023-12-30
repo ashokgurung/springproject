@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>emp_list</title>
+</head>
+<body>
+	
+	   <th:block th:insert="Header.html"></th:block>	
+	
+	<div class="container-fluid">
+		
+	<div class="card">  
+		
+		<div class="card-header text-center text-white bg-primary">
+			
+			<h4>Employee List </h4>
+		</div>
+		
+		<div class="card-body">
+			
+			<table class="table" id="empTable">
+				
+				<div>
+					<a href="/emp/excel"><input type="submit" value="Excel" class="btn btn-success"></a>
+					<a href="/emp/pdf"><input type="submit" value="Pdf" class="btn btn-primary"></a>
+				</div>
+				
+				
+				<thead>
+					<tr>
+						<th> FirstName </th>
+						<th> LastName </th>
+						<th> DoB </th>
+						<th> Phone </th>
+						<th> CompanyName </th>						
+		                <th> Email </th>
+		                <th> Country </th>
+		                <th> City </th>
+						<th> Action </th>
+					</tr>
+					
+				</thead>
+				<tbody>
+					<tr th:each="e : ${eList}">					
+						<td>[[${e.fname}]]</td>
+						<td>[[${e.lname}]]</td>
+						<td>[[${e.dob}]]</td>
+						<td>[[${e.phone}]]</td>
+						<td>[[${e.companyName}]]</td>						
+						<td>[[${e.email}]]</td>
+						<td>[[${e.address.country}]]</td>
+						<td>[[${e.address.city}]]</td>
+						
+						<td>
+							
+							<a th:href="@{/emp/edit(id=${e.id})}"><input type="submit" value="Edit" class="btn btn-success"> </a>
+							<a th:href="@{/emp/delete(id=${e.id})}"><input type="submit" value="Delete" class="btn btn-danger"> </a>
+							
+						</td>		                                                                            
+	                 </tr>
+					
+				</tbody>
+				
+			</table>
+			
+			
+			</div>
+		
+		<div class="card-footer text-center bg-warning">
+			
+			<h6>copyright@2023</h6>
+		</div>
+	</div>	
+		
+	</div>
+
+</body>
+</html>
